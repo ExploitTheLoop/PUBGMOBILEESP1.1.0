@@ -1,0 +1,3888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:card_view="http://schemas.android.com/apk/res-auto"
+	android:layout_gravity="left|end"
+	android:textAlignment="viewEnd"
+	tools:ignore="RtlHardcoded">
+
+	<RelativeLayout
+		android:id="@+id/relativeLayoutParent"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:ignore="UselessParent">
+
+		<!-- this is the collapsed layout -->
+
+		<RelativeLayout
+			android:id="@+id/layoutCollapsed"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/floatLogo"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:src="@drawable/icon"
+				tools:ignore="ContentDescription" />
+
+		</RelativeLayout>
+	</RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/expanded_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="horizontal"
+		android:visibility="gone">
+
+		<LinearLayout
+			android:layout_width="50dp"
+			android:layout_height="match_parent"
+			android:background="#FF102030"
+			android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/playerBtn2"
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:layout_gravity="center"
+				android:layout_marginTop="15dp"
+				android:src="@drawable/homemenu"></ImageView>
+
+			<ImageView
+				android:id="@+id/itemBtn"
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:layout_gravity="center"
+				android:layout_marginTop="15dp"
+				android:src="@drawable/itemmenu"></ImageView>
+
+		</LinearLayout>
+
+		<androidx.cardview.widget.CardView
+			android:id="@+id/cheatAll"
+			android:layout_width="350dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="left"
+			card_view:cardBackgroundColor="#FF102030"
+			card_view:cardCornerRadius="0dp"
+			card_view:cardPreventCornerOverlap="false">
+
+			<RelativeLayout
+				android:id="@+id/espView"
+				android:layout_width="350dp"
+				android:layout_height="match_parent"
+				tools:ignore="UselessParent">
+
+				<ScrollView
+					android:id="@+id/contentView"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="10dp"
+					android:layout_marginTop="50dp"
+					android:layout_marginRight="10dp"
+					android:scrollbarSize="0dp">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp"
+						android:orientation="vertical">
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical">
+
+							<LinearLayout
+								android:id="@+id/settingmenu"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:orientation="vertical"
+								android:visibility="gone">
+
+								<TextView
+									android:id="@+id/playerBtn"
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:layout_margin="10dp"
+									android:layout_weight="1"
+									android:gravity="center"
+									android:text="Back >>>"
+									android:textColor="#FFFFFF"
+									android:textSize="15sp"
+									tools:ignore="HardcodedText" />
+
+							</LinearLayout>
+
+							<LinearLayout
+								android:id="@+id/players"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_marginBottom="20dp"
+								android:orientation="vertical"
+								android:visibility="visible">
+
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:orientation="vertical">
+
+									<TextView
+										android:id="@+id/setting"
+										android:layout_width="wrap_content"
+										android:layout_height="match_parent"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Setting"
+										android:textColor="#FFFFFF"
+										android:textSize="15sp"
+										android:visibility="gone"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/vehicleBtn"
+										android:layout_width="wrap_content"
+										android:layout_height="match_parent"
+										android:layout_weight="1"
+										android:background="#F2ffffff"
+										android:gravity="center"
+										android:text="VEHICLE"
+										android:textColor="#FFFFFF"
+										android:textSize="15sp"
+										android:visibility="gone"
+										tools:ignore="HardcodedText" />
+
+									<LinearLayout
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_marginLeft="10dp"
+										android:orientation="vertical">
+
+										<TextView
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginBottom="5dp"
+											android:text="Render Framerate"
+											android:textColor="#FFFFFF"></TextView>
+
+										<RadioButton
+											android:id="@+id/fpsdefault"
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:buttonTint="#FFFFFF"
+											android:text="30 FPS"
+											android:textColor="#FFFFFF"></RadioButton>
+
+										<RadioButton
+											android:id="@+id/fps60"
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:buttonTint="#FFFFFF"
+											android:text="60 FPS"
+											android:textColor="#FFFFFF"></RadioButton>
+
+										<RadioButton
+											android:id="@+id/fps90"
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:buttonTint="#FFFFFF"
+											android:text="90 FPS"
+											android:textColor="#FFFFFF"></RadioButton>
+
+										<RadioButton
+											android:id="@+id/fps120"
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:buttonTint="#FFFFFF"
+											android:text="120 FPS"
+											android:textColor="#FFFFFF"></RadioButton>
+
+									</LinearLayout>
+
+									<RelativeLayout
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_margin="10dp">
+
+										<Switch
+											android:id="@+id/isBox"
+											android:layout_width="280dp"
+											android:layout_height="wrap_content"
+											android:checked="true"
+											android:text="Show Box"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<ToggleButton
+											android:id="@+id/showstyele"
+											android:layout_width="30dp"
+											android:layout_height="30dp"
+											android:layout_toRightOf="@+id/isBox"
+											android:background="@drawable/toggletheme"
+											android:text=""
+											android:textOff=""
+											android:textOn=""></ToggleButton>
+
+									</RelativeLayout>
+
+									<androidx.cardview.widget.CardView
+										android:id="@+id/themebox"
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_below="@+id/Section"
+										android:layout_margin="10dp"
+										android:visibility="gone"
+										card_view:cardBackgroundColor="#FF102030"
+										card_view:cardCornerRadius="10dp"
+										card_view:cardPreventCornerOverlap="false">
+
+										<TextView
+											android:id="@+id/boxtheme"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:text="Box Color and Thickness"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="30dp"
+											android:layout_marginBottom="10dp">
+
+											<com.flask.colorpicker.ColorPickerView
+												android:id="@+id/color_picker_view"
+												android:layout_width="150dp"
+												android:layout_height="150dp"
+												android:layout_alignParentLeft="true"
+												card_view:alphaSlider="true"
+												card_view:alphaSliderView="@+id/v_alpha_slider"
+												card_view:density="12"
+												card_view:lightnessSlider="true"
+												card_view:lightnessSliderView="@+id/v_lightness_slider"
+												card_view:wheelType="CIRCLE" />
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_marginLeft="10dp"
+												android:layout_toRightOf="@+id/color_picker_view"
+												android:orientation="vertical">
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Light"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.LightnessSlider
+													android:id="@+id/v_lightness_slider"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Alpha"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.AlphaSlider
+													android:id="@+id/v_alpha_slider"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+											</LinearLayout>
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="30dp"
+												android:layout_marginLeft="10dp"
+												android:layout_marginTop="120dp"
+												android:layout_toRightOf="@+id/color_picker_view"
+												android:orientation="horizontal">
+
+												<TextView
+													android:id="@+id/boxstrokeText"
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:layout_alignLeft="@id/fps"
+													android:gravity="center_vertical"
+													android:text="0"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													tools:ignore="HardcodedText" />
+
+												<SeekBar
+													android:id="@+id/boxstroke"
+													android:layout_width="match_parent"
+													android:layout_height="match_parent"
+													android:max="3"
+													android:progress="200" />
+
+											</LinearLayout>
+
+										</RelativeLayout>
+
+									</androidx.cardview.widget.CardView>
+
+									<RelativeLayout
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_margin="10dp">
+
+										<Switch
+											android:id="@+id/isName"
+											android:layout_width="280dp"
+											android:layout_height="wrap_content"
+											android:checked="true"
+											android:text="Show Name"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<ToggleButton
+											android:id="@+id/showstyele7"
+											android:layout_width="30dp"
+											android:layout_height="30dp"
+											android:layout_toRightOf="@+id/isName"
+											android:background="@drawable/toggletheme"
+											android:text=""
+											android:textOff=""
+											android:textOn=""></ToggleButton>
+
+									</RelativeLayout>
+
+									<androidx.cardview.widget.CardView
+										android:id="@+id/themeisname"
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_below="@+id/Section"
+										android:layout_margin="10dp"
+										android:visibility="gone"
+										card_view:cardBackgroundColor="#FF102030"
+										card_view:cardCornerRadius="10dp"
+										card_view:cardPreventCornerOverlap="false">
+
+										<TextView
+											android:id="@+id/isnametheme"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:text="Name Custom Color"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="30dp"
+											android:layout_marginBottom="10dp">
+
+											<View
+												android:id="@+id/radiobatas"
+												android:layout_width="0dp"
+												android:layout_height="0dp"
+												android:layout_centerInParent="true"></View>
+
+											<RadioButton
+												android:id="@+id/bgName"
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_toLeftOf="@id/radiobatas"
+												android:buttonTint="#FFFFFF"
+												android:text="Background Color"
+												android:textColor="#FFFFFF"></RadioButton>
+
+											<RadioButton
+												android:id="@+id/clrname"
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_toRightOf="@+id/radiobatas"
+												android:buttonTint="#FFFFFF"
+												android:text="Text Color"
+												android:textColor="#FFFFFF"></RadioButton>
+
+											<RadioButton
+												android:id="@+id/bgID"
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_below="@id/clrname"
+												android:buttonTint="#FFFFFF"
+												android:text="ID Background Color"
+												android:textColor="#FFFFFF"></RadioButton>
+
+										</RelativeLayout>
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="110dp"
+											android:layout_marginBottom="10dp">
+
+											<com.flask.colorpicker.ColorPickerView
+												android:id="@+id/color_picker_viewisname"
+												android:layout_width="150dp"
+												android:layout_height="150dp"
+												android:layout_alignParentLeft="true"
+												card_view:alphaSlider="true"
+												card_view:alphaSliderView="@+id/v_alpha_sliderisname"
+												card_view:density="12"
+												card_view:lightnessSlider="true"
+												card_view:lightnessSliderView="@+id/v_lightness_sliderisname"
+												card_view:wheelType="CIRCLE" />
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_marginLeft="10dp"
+												android:layout_toRightOf="@+id/color_picker_viewisname"
+												android:orientation="vertical">
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Light"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.LightnessSlider
+													android:id="@+id/v_lightness_sliderisname"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Alpha"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.AlphaSlider
+													android:id="@+id/v_alpha_sliderisname"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+											</LinearLayout>
+
+										</RelativeLayout>
+									</androidx.cardview.widget.CardView>
+
+									<RelativeLayout
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_margin="10dp">
+
+										<Switch
+											android:id="@+id/isDist"
+											android:layout_width="280dp"
+											android:layout_height="wrap_content"
+											android:checked="true"
+											android:text="Show Distance"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<ToggleButton
+											android:id="@+id/showstyele8"
+											android:layout_width="30dp"
+											android:layout_height="30dp"
+											android:layout_toRightOf="@+id/isDist"
+											android:background="@drawable/toggletheme"
+											android:text=""
+											android:textOff=""
+											android:textOn=""></ToggleButton>
+
+									</RelativeLayout>
+
+									<androidx.cardview.widget.CardView
+										android:id="@+id/themeisDist"
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_below="@+id/Section"
+										android:layout_margin="10dp"
+										android:visibility="gone"
+										card_view:cardBackgroundColor="#FF102030"
+										card_view:cardCornerRadius="10dp"
+										card_view:cardPreventCornerOverlap="false">
+
+										<TextView
+											android:id="@+id/isDisttheme"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:text="Distance Custom Color"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="30dp"
+											android:layout_marginBottom="10dp">
+
+											<View
+												android:id="@+id/radiobatas2"
+												android:layout_width="0dp"
+												android:layout_height="0dp"
+												android:layout_centerInParent="true"></View>
+
+											<RadioButton
+												android:id="@+id/bgDist"
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_toLeftOf="@id/radiobatas2"
+												android:buttonTint="#FFFFFF"
+												android:text="Background Color"
+												android:textColor="#FFFFFF"></RadioButton>
+
+											<RadioButton
+												android:id="@+id/clrDist"
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_toRightOf="@+id/radiobatas2"
+												android:buttonTint="#FFFFFF"
+												android:text="Text Color"
+												android:textColor="#FFFFFF"></RadioButton>
+
+										</RelativeLayout>
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="80dp"
+											android:layout_marginBottom="10dp">
+
+											<com.flask.colorpicker.ColorPickerView
+												android:id="@+id/color_picker_viewisDist"
+												android:layout_width="150dp"
+												android:layout_height="150dp"
+												android:layout_alignParentLeft="true"
+												card_view:alphaSlider="true"
+												card_view:alphaSliderView="@+id/v_alpha_sliderisDist"
+												card_view:density="12"
+												card_view:lightnessSlider="true"
+												card_view:lightnessSliderView="@+id/v_lightness_sliderisDist"
+												card_view:wheelType="CIRCLE" />
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_marginLeft="10dp"
+												android:layout_toRightOf="@+id/color_picker_viewisDist"
+												android:orientation="vertical">
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Light"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.LightnessSlider
+													android:id="@+id/v_lightness_sliderisDist"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Alpha"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.AlphaSlider
+													android:id="@+id/v_alpha_sliderisDist"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+											</LinearLayout>
+
+										</RelativeLayout>
+									</androidx.cardview.widget.CardView>
+
+									<RelativeLayout
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_margin="10dp">
+
+										<Switch
+											android:id="@+id/isEnemyWeapon"
+											android:layout_width="280dp"
+											android:layout_height="wrap_content"
+											android:checked="true"
+											android:text="Show Enemy Weapon"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<ToggleButton
+											android:id="@+id/showstyele9"
+											android:layout_width="30dp"
+											android:layout_height="30dp"
+											android:layout_toRightOf="@+id/isEnemyWeapon"
+											android:background="@drawable/toggletheme"
+											android:text=""
+											android:textOff=""
+											android:textOn=""></ToggleButton>
+
+									</RelativeLayout>
+
+									<androidx.cardview.widget.CardView
+										android:id="@+id/themeisEnemyWeapon"
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_below="@+id/Section"
+										android:layout_margin="10dp"
+										android:visibility="gone"
+										card_view:cardBackgroundColor="#FF102030"
+										card_view:cardCornerRadius="10dp"
+										card_view:cardPreventCornerOverlap="false">
+
+										<TextView
+											android:id="@+id/isEnemyWeapontheme"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:text="Enemy Weapon Custom Color"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="30dp"
+											android:layout_marginBottom="10dp">
+
+											<View
+												android:id="@+id/radiobatas3"
+												android:layout_width="0dp"
+												android:layout_height="0dp"
+												android:layout_centerInParent="true"></View>
+
+											<RadioButton
+												android:id="@+id/bgEnWeapon"
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_toLeftOf="@id/radiobatas3"
+												android:buttonTint="#FFFFFF"
+												android:text="Background Color"
+												android:textColor="#FFFFFF"></RadioButton>
+
+											<RadioButton
+												android:id="@+id/clrEnWeapon"
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_toRightOf="@+id/radiobatas3"
+												android:buttonTint="#FFFFFF"
+												android:text="Text Color"
+												android:textColor="#FFFFFF"></RadioButton>
+
+										</RelativeLayout>
+
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="80dp"
+											android:layout_marginBottom="10dp">
+
+											<com.flask.colorpicker.ColorPickerView
+												android:id="@+id/color_picker_viewisEnemyWeapon"
+												android:layout_width="150dp"
+												android:layout_height="150dp"
+												android:layout_alignParentLeft="true"
+												card_view:alphaSlider="true"
+												card_view:alphaSliderView="@+id/v_alpha_sliderisEnemyWeapon"
+												card_view:density="12"
+												card_view:lightnessSlider="true"
+												card_view:lightnessSliderView="@+id/v_lightness_sliderisEnemyWeapon"
+												card_view:wheelType="CIRCLE" />
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_marginLeft="10dp"
+												android:layout_toRightOf="@+id/color_picker_viewisEnemyWeapon"
+												android:orientation="vertical">
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Light"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.LightnessSlider
+													android:id="@+id/v_lightness_sliderisEnemyWeapon"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Alpha"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.AlphaSlider
+													android:id="@+id/v_alpha_sliderisEnemyWeapon"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+											</LinearLayout>
+
+										</RelativeLayout>
+									</androidx.cardview.widget.CardView>
+
+									<RelativeLayout
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_margin="10dp">
+
+										<Switch
+											android:id="@+id/isSkelton"
+											android:layout_width="280dp"
+											android:layout_height="wrap_content"
+											android:checked="true"
+											android:text="Show Skeltons"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<ToggleButton
+											android:id="@+id/showstyele2"
+											android:layout_width="30dp"
+											android:layout_height="30dp"
+											android:layout_toRightOf="@+id/isSkelton"
+											android:background="@drawable/toggletheme"
+											android:text=""
+											android:textOff=""
+											android:textOn=""></ToggleButton>
+
+									</RelativeLayout>
+
+									<androidx.cardview.widget.CardView
+										android:id="@+id/themeskeleton"
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_below="@+id/Section"
+										android:layout_margin="10dp"
+										android:visibility="gone"
+										card_view:cardBackgroundColor="#FF102030"
+										card_view:cardCornerRadius="10dp"
+										card_view:cardPreventCornerOverlap="false">
+
+										<TextView
+											android:id="@+id/skeletontheme"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:text="Skeleton Color and Thickness"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="30dp"
+											android:layout_marginBottom="10dp">
+
+											<com.flask.colorpicker.ColorPickerView
+												android:id="@+id/color_picker_viewskel"
+												android:layout_width="150dp"
+												android:layout_height="150dp"
+												android:layout_alignParentLeft="true"
+												card_view:alphaSlider="true"
+												card_view:alphaSliderView="@+id/v_alpha_sliderskel"
+												card_view:density="12"
+												card_view:lightnessSlider="true"
+												card_view:lightnessSliderView="@+id/v_lightness_sliderskel"
+												card_view:wheelType="CIRCLE" />
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_marginLeft="10dp"
+												android:layout_toRightOf="@+id/color_picker_viewskel"
+												android:orientation="vertical">
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Light"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.LightnessSlider
+													android:id="@+id/v_lightness_sliderskel"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Alpha"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.AlphaSlider
+													android:id="@+id/v_alpha_sliderskel"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+											</LinearLayout>
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="30dp"
+												android:layout_marginLeft="10dp"
+												android:layout_marginTop="120dp"
+												android:layout_toRightOf="@+id/color_picker_viewskel"
+												android:orientation="horizontal">
+
+												<TextView
+													android:id="@+id/skeletonstrokeText"
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:layout_alignLeft="@id/fps"
+													android:gravity="center_vertical"
+													android:text="0"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													tools:ignore="HardcodedText" />
+
+												<SeekBar
+													android:id="@+id/skeletonstroke"
+													android:layout_width="match_parent"
+													android:layout_height="match_parent"
+													android:max="3"
+													android:progress="200" />
+
+											</LinearLayout>
+
+										</RelativeLayout>
+									</androidx.cardview.widget.CardView>
+
+									<RelativeLayout
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_margin="10dp">
+
+										<Switch
+											android:id="@+id/isHead"
+											android:layout_width="280dp"
+											android:layout_height="wrap_content"
+											android:checked="true"
+											android:text="Show Enemy Head"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<ToggleButton
+											android:id="@+id/showstyele3"
+											android:layout_width="30dp"
+											android:layout_height="30dp"
+											android:layout_toRightOf="@+id/isHead"
+											android:background="@drawable/toggletheme"
+											android:text=""
+											android:textOff=""
+											android:textOn=""></ToggleButton>
+
+									</RelativeLayout>
+
+									<androidx.cardview.widget.CardView
+										android:id="@+id/themeshead"
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_below="@+id/Section"
+										android:layout_margin="10dp"
+										android:visibility="gone"
+										card_view:cardBackgroundColor="#FF102030"
+										card_view:cardCornerRadius="10dp"
+										card_view:cardPreventCornerOverlap="false">
+
+										<TextView
+											android:id="@+id/headtheme"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:text="Head Color"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="30dp"
+											android:layout_marginBottom="10dp">
+
+											<com.flask.colorpicker.ColorPickerView
+												android:id="@+id/color_picker_viewhead"
+												android:layout_width="150dp"
+												android:layout_height="150dp"
+												android:layout_alignParentLeft="true"
+												card_view:alphaSlider="true"
+												card_view:alphaSliderView="@+id/v_alpha_sliderhead"
+												card_view:density="12"
+												card_view:lightnessSlider="true"
+												card_view:lightnessSliderView="@+id/v_lightness_sliderhead"
+												card_view:wheelType="CIRCLE" />
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_marginLeft="10dp"
+												android:layout_toRightOf="@+id/color_picker_viewhead"
+												android:orientation="vertical">
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Light"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.LightnessSlider
+													android:id="@+id/v_lightness_sliderhead"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Alpha"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.AlphaSlider
+													android:id="@+id/v_alpha_sliderhead"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+											</LinearLayout>
+
+										</RelativeLayout>
+									</androidx.cardview.widget.CardView>
+
+									<RelativeLayout
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_margin="10dp">
+
+										<Switch
+											android:id="@+id/isLine"
+											android:layout_width="280dp"
+											android:layout_height="wrap_content"
+											android:checked="true"
+											android:text="Show Radar Line"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<ToggleButton
+											android:id="@+id/showstyele4"
+											android:layout_width="30dp"
+											android:layout_height="30dp"
+											android:layout_toRightOf="@+id/isLine"
+											android:background="@drawable/toggletheme"
+											android:text=""
+											android:textOff=""
+											android:textOn=""></ToggleButton>
+
+									</RelativeLayout>
+
+									<androidx.cardview.widget.CardView
+										android:id="@+id/themeline"
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_below="@+id/Section"
+										android:layout_margin="10dp"
+										android:visibility="gone"
+										card_view:cardBackgroundColor="#FF102030"
+										card_view:cardCornerRadius="10dp"
+										card_view:cardPreventCornerOverlap="false">
+
+										<TextView
+											android:id="@+id/linetheme"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:text="Line Color and Thickness"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="30dp"
+											android:layout_marginBottom="10dp">
+
+											<com.flask.colorpicker.ColorPickerView
+												android:id="@+id/color_picker_viewline"
+												android:layout_width="150dp"
+												android:layout_height="150dp"
+												android:layout_alignParentLeft="true"
+												card_view:alphaSlider="true"
+												card_view:alphaSliderView="@+id/v_alpha_sliderline"
+												card_view:density="12"
+												card_view:lightnessSlider="true"
+												card_view:lightnessSliderView="@+id/v_lightness_sliderline"
+												card_view:wheelType="CIRCLE" />
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_marginLeft="10dp"
+												android:layout_toRightOf="@+id/color_picker_viewline"
+												android:orientation="vertical">
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Light"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.LightnessSlider
+													android:id="@+id/v_lightness_sliderline"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Alpha"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.AlphaSlider
+													android:id="@+id/v_alpha_sliderline"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+											</LinearLayout>
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="30dp"
+												android:layout_marginLeft="10dp"
+												android:layout_marginTop="120dp"
+												android:layout_toRightOf="@+id/color_picker_viewline"
+												android:orientation="horizontal">
+
+												<TextView
+													android:id="@+id/linestrokeText"
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:layout_alignLeft="@id/fps"
+													android:gravity="center_vertical"
+													android:text="0"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													tools:ignore="HardcodedText" />
+
+												<SeekBar
+													android:id="@+id/linestroke"
+													android:layout_width="match_parent"
+													android:layout_height="match_parent"
+													android:max="3"
+													android:progress="200" />
+
+											</LinearLayout>
+
+										</RelativeLayout>
+									</androidx.cardview.widget.CardView>
+
+									<Switch
+										android:id="@+id/isHealth"
+										android:layout_width="280dp"
+										android:layout_height="wrap_content"
+										android:layout_margin="10dp"
+										android:checked="true"
+										android:text="Show Health"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<Switch
+										android:id="@+id/isGrenadeWarning"
+										android:layout_width="280dp"
+										android:layout_height="wrap_content"
+										android:layout_margin="10dp"
+										android:checked="true"
+										android:text="Show Granade Alert"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<RelativeLayout
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_margin="10dp">
+
+										<Switch
+											android:id="@+id/isBack"
+											android:layout_width="280dp"
+											android:layout_height="wrap_content"
+											android:checked="true"
+											android:text="360 ALERT"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<ToggleButton
+											android:id="@+id/showstyele5"
+											android:layout_width="30dp"
+											android:layout_height="30dp"
+											android:layout_toRightOf="@+id/isBack"
+											android:background="@drawable/toggletheme"
+											android:text=""
+											android:textOff=""
+											android:textOn=""></ToggleButton>
+
+									</RelativeLayout>
+
+									<androidx.cardview.widget.CardView
+										android:id="@+id/themealert"
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_below="@+id/Section"
+										android:layout_margin="10dp"
+										android:visibility="gone"
+										card_view:cardBackgroundColor="#FF102030"
+										card_view:cardCornerRadius="10dp"
+										card_view:cardPreventCornerOverlap="false">
+
+										<TextView
+											android:id="@+id/alerttheme"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:text="360 Alert Color"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="30dp"
+											android:layout_marginBottom="10dp">
+
+											<com.flask.colorpicker.ColorPickerView
+												android:id="@+id/color_picker_viewalert"
+												android:layout_width="150dp"
+												android:layout_height="150dp"
+												android:layout_alignParentLeft="true"
+												card_view:alphaSlider="true"
+												card_view:alphaSliderView="@+id/v_alpha_slideralert"
+												card_view:density="12"
+												card_view:lightnessSlider="true"
+												card_view:lightnessSliderView="@+id/v_lightness_slideralert"
+												card_view:wheelType="CIRCLE" />
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_marginLeft="10dp"
+												android:layout_toRightOf="@+id/color_picker_viewalert"
+												android:orientation="vertical">
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Light"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.LightnessSlider
+													android:id="@+id/v_lightness_slideralert"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Alpha"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.AlphaSlider
+													android:id="@+id/v_alpha_slideralert"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+											</LinearLayout>
+
+										</RelativeLayout>
+
+										<TextView
+											android:id="@+id/alertthememenu"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:layout_marginTop="190dp"
+											android:text="360 Alert Color Text"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="220dp"
+											android:layout_marginBottom="10dp">
+
+											<com.flask.colorpicker.ColorPickerView
+												android:id="@+id/color_picker_viewalerttext"
+												android:layout_width="150dp"
+												android:layout_height="150dp"
+												android:layout_alignParentLeft="true"
+												card_view:alphaSlider="true"
+												card_view:alphaSliderView="@+id/v_alpha_slideralerttext"
+												card_view:density="12"
+												card_view:lightnessSlider="true"
+												card_view:lightnessSliderView="@+id/v_lightness_slideralerttext"
+												card_view:wheelType="CIRCLE" />
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_marginLeft="10dp"
+												android:layout_toRightOf="@+id/color_picker_viewalerttext"
+												android:orientation="vertical">
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Light"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.LightnessSlider
+													android:id="@+id/v_lightness_slideralerttext"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+
+												<TextView
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:gravity="left"
+													android:text="Alpha"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													android:textSize="10dp"
+													tools:ignore="HardcodedText" />
+
+												<com.flask.colorpicker.slider.AlphaSlider
+													android:id="@+id/v_alpha_slideralerttext"
+													android:layout_width="match_parent"
+													android:layout_height="48dp" />
+											</LinearLayout>
+
+										</RelativeLayout>
+
+										<TextView
+											android:id="@+id/alertstylemenu"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:layout_marginTop="380dp"
+											android:text="360 Alert Style"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText" />
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="410dp"
+											android:layout_marginBottom="10dp">
+
+											<CheckBox
+												android:id="@+id/SQUARE"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="SQUARE"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+										</RelativeLayout>
+
+									</androidx.cardview.widget.CardView>
+
+									<androidx.cardview.widget.CardView
+										android:id="@+id/themeplayer"
+										android:layout_width="match_parent"
+										android:layout_height="wrap_content"
+										android:layout_margin="10dp"
+										card_view:cardBackgroundColor="#FF102030"
+										card_view:cardCornerRadius="10dp"
+										card_view:cardPreventCornerOverlap="false">
+
+										<TextView
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content"
+											android:layout_marginTop="5dp"
+											android:gravity="center_vertical"
+											android:text="Render Frame Rate (Fps)"
+											android:textAlignment="gravity"
+											android:textColor="#FFFFFF"
+											android:visibility="gone"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="match_parent"
+											android:layout_height="30dp"
+											android:layout_marginLeft="5dp"
+											android:layout_marginTop="40dp"
+											android:orientation="horizontal"
+											android:visibility="gone">
+
+											<TextView
+												android:id="@+id/fpsText"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:layout_alignLeft="@id/fps"
+												android:gravity="center_vertical"
+												android:text="0"
+												android:textAlignment="gravity"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<SeekBar
+												android:id="@+id/fps"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:max="400"
+												android:progress="200" />
+
+										</LinearLayout>
+
+										<RelativeLayout
+											android:layout_width="match_parent"
+											android:layout_height="wrap_content">
+
+											<View
+												android:id="@+id/batasView"
+												android:layout_width="0dp"
+												android:layout_height="0dp"
+												android:layout_centerInParent="true"></View>
+
+											<TextView
+												android:layout_width="match_parent"
+												android:layout_height="wrap_content"
+												android:layout_marginLeft="5dp"
+												android:layout_marginTop="0dp"
+												android:layout_toLeftOf="@+id/batasView"
+												android:gravity="center_vertical"
+												android:text="Size"
+												android:textAlignment="gravity"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="80dp"
+												android:layout_marginLeft="5dp"
+												android:layout_marginTop="10dp"
+												android:layout_marginBottom="10dp"
+												android:layout_toLeftOf="@+id/batasView"
+												android:orientation="horizontal">
+
+												<TextView
+													android:id="@+id/SizeText"
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:layout_alignLeft="@id/Size"
+													android:layout_marginTop="30dp"
+													android:gravity="center_vertical"
+													android:text="0"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													tools:ignore="HardcodedText" />
+
+												<SeekBar
+													android:id="@+id/Size"
+													android:layout_width="match_parent"
+													android:layout_height="match_parent"
+													android:max="10"
+													android:progress="200" />
+
+											</LinearLayout>
+
+											<TextView
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:layout_marginLeft="5dp"
+												android:layout_marginTop="0dp"
+												android:layout_toRightOf="@id/batasView"
+												android:gravity="center_vertical"
+												android:text="Position"
+												android:textAlignment="gravity"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<LinearLayout
+												android:layout_width="match_parent"
+												android:layout_height="80dp"
+												android:layout_marginLeft="5dp"
+												android:layout_marginTop="10dp"
+												android:layout_marginBottom="10dp"
+												android:layout_toRightOf="@id/batasView"
+												android:orientation="horizontal">
+
+												<TextView
+													android:id="@+id/positionText"
+													android:layout_width="wrap_content"
+													android:layout_height="wrap_content"
+													android:layout_alignLeft="@id/position"
+													android:layout_marginTop="30dp"
+													android:gravity="center_vertical"
+													android:text="0"
+													android:textAlignment="gravity"
+													android:textColor="#FFFFFF"
+													tools:ignore="HardcodedText" />
+
+												<SeekBar
+													android:id="@+id/position"
+													android:layout_width="match_parent"
+													android:layout_height="match_parent"
+													android:max="150"
+													android:progress="200" />
+
+											</LinearLayout>
+										</RelativeLayout>
+
+									</androidx.cardview.widget.CardView>
+
+								</LinearLayout>
+
+							</LinearLayout>
+
+						</LinearLayout>
+					</LinearLayout>
+				</ScrollView>
+
+				<LinearLayout
+					android:id="@+id/items"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginTop="50dp"
+					android:layout_marginBottom="20dp"
+					android:orientation="vertical"
+					android:visibility="gone">
+
+					<TextView
+						android:id="@+id/setting2"
+						android:layout_width="wrap_content"
+						android:layout_height="30dp"
+						android:layout_marginLeft="5dp"
+						android:layout_marginTop="10dp"
+						android:gravity="center"
+						android:text="Setting"
+						android:textColor="#FFFFFF"
+						android:textSize="15sp"
+						android:visibility="gone"
+						tools:ignore="HardcodedText"></TextView>
+
+					<ToggleButton
+						android:id="@+id/showstyele6"
+						android:layout_width="30dp"
+						android:layout_height="30dp"
+						android:layout_gravity="right"
+						android:layout_marginRight="20dp"
+						android:background="@drawable/toggletheme"
+						android:text=""
+						android:textOff=""
+						android:textOn=""></ToggleButton>
+
+					<androidx.cardview.widget.CardView
+						android:id="@+id/themeitem"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_below="@+id/Section"
+						android:layout_margin="10dp"
+						android:visibility="gone"
+						card_view:cardBackgroundColor="#FF102030"
+						card_view:cardCornerRadius="10dp"
+						card_view:cardPreventCornerOverlap="false">
+
+						<TextView
+							android:id="@+id/itemtheme"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_gravity="left"
+							android:layout_marginTop="5dp"
+							android:text="Item Theme"
+							android:textColor="#FFFFFF"
+							tools:ignore="HardcodedText" />
+
+						<RelativeLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:layout_marginBottom="10dp">
+
+							<View
+								android:id="@+id/view"
+								android:layout_width="0dp"
+								android:layout_height="0dp"
+								android:layout_centerInParent="true"></View>
+
+							<CheckBox
+								android:id="@+id/meterial"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="20dp"
+								android:layout_toLeftOf="@+id/view"
+								android:buttonTint="#FFFFFF"
+								android:checked="true"
+								android:text="Material"
+								android:textColor="#FFFFFF"
+								tools:ignore="HardcodedText" />
+
+							<CheckBox
+								android:id="@+id/dual"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="20dp"
+								android:layout_toRightOf="@+id/view"
+								android:buttonTint="#FFFFFF"
+								android:checked="true"
+								android:text="Dual"
+								android:textColor="#FFFFFF"
+								tools:ignore="HardcodedText" />
+
+							<CheckBox
+								android:id="@+id/meterialdistance"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_below="@id/dual"
+								android:layout_toLeftOf="@+id/view"
+								android:buttonTint="#FFFFFF"
+								android:checked="true"
+								android:text="MaterialDistance"
+								android:textColor="#FFFFFF"
+								tools:ignore="HardcodedText" />
+
+							<TextView
+								android:id="@+id/SizeJudul"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_below="@+id/meterialdistance"
+								android:layout_marginLeft="10dp"
+								android:layout_marginTop="10dp"
+								android:layout_toLeftOf="@+id/view"
+								android:text="Name Size"
+								android:textColor="#FFFFFF"></TextView>
+
+							<LinearLayout
+								android:layout_width="match_parent"
+								android:layout_height="30dp"
+								android:layout_below="@+id/SizeJudul"
+								android:layout_marginLeft="10dp"
+								android:layout_marginTop="10dp"
+								android:layout_toLeftOf="@+id/view"
+								android:orientation="horizontal">
+
+								<TextView
+									android:id="@+id/itemSizeText"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_alignLeft="@id/itemSize"
+									android:gravity="center_vertical"
+									android:text="0"
+									android:textAlignment="gravity"
+									android:textColor="#FFFFFF"
+									tools:ignore="HardcodedText" />
+
+								<SeekBar
+									android:id="@+id/itemSize"
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:max="10"
+									android:progress="200" />
+
+							</LinearLayout>
+
+							<TextView
+								android:id="@+id/positionJudul"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_below="@+id/meterialdistance"
+								android:layout_marginLeft="10dp"
+								android:layout_marginTop="10dp"
+								android:layout_toRightOf="@+id/view"
+								android:text="Item Position"
+								android:textColor="#FFFFFF"></TextView>
+
+							<LinearLayout
+								android:layout_width="match_parent"
+								android:layout_height="30dp"
+								android:layout_below="@+id/SizeJudul"
+								android:layout_marginLeft="10dp"
+								android:layout_marginTop="10dp"
+								android:layout_toRightOf="@+id/view"
+								android:orientation="horizontal">
+
+								<TextView
+									android:id="@+id/itemPositionText"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_alignLeft="@id/itemPosition"
+									android:gravity="center_vertical"
+									android:text="0"
+									android:textAlignment="gravity"
+									android:textColor="#FFFFFF"
+									tools:ignore="HardcodedText" />
+
+								<SeekBar
+									android:id="@+id/itemPosition"
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:max="50"
+									android:progress="200" />
+
+							</LinearLayout>
+
+						</RelativeLayout>
+					</androidx.cardview.widget.CardView>
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="0dp">
+
+						<LinearLayout
+							android:id="@+id/menu1"
+							android:layout_width="120dp"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="5dp"
+							android:orientation="vertical">
+
+							<ScrollView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:scrollbarSize="0dp">
+
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:orientation="vertical">
+
+									<TextView
+										android:id="@+id/vihicleitem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Vehicle"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/spesitem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Special Item"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/autoitem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Ar Smg"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/sniperitem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Sniper"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/shotgunitem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Shotgun"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/pistolitem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Pistol"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/scopeitem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Scope"
+										android:textColor="#FFFFFF"
+										android:textSize="15sp"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/ammoitem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Ammo"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/baghelmetitem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Bag"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/healthkititem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Health Kit"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/Throwablesitem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Throwbles"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+									<TextView
+										android:id="@+id/otheritem"
+										android:layout_width="match_parent"
+										android:layout_height="30dp"
+										android:layout_weight="1"
+										android:gravity="center"
+										android:text="Other Item"
+										android:textColor="#FFFFFF"
+										tools:ignore="HardcodedText" />
+
+								</LinearLayout>
+							</ScrollView>
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="5dp"
+							android:layout_toRightOf="@id/menu1"
+							android:orientation="vertical">
+
+							<ScrollView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:scrollbarSize="0dp">
+
+								<LinearLayout
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:orientation="vertical">
+
+									<LinearLayout
+										android:id="@+id/spesialsitem"
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:orientation="vertical"
+										android:visibility="gone">
+
+										<TextView
+											android:id="@+id/special"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="SPECIAL ITEMS"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											tools:ignore="HardcodedText" />
+
+										<TableLayout
+											android:id="@+id/specialTab"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:visibility="visible">
+
+											<TableRow
+												android:layout_width="match_parent"
+												android:layout_height="match_parent">
+
+												<CheckBox
+													android:id="@+id/FlareGun"
+													android:layout_width="match_parent"
+													android:layout_height="match_parent"
+													android:buttonTint="#FFFFFF"
+													android:checked="true"
+													android:text="Flare Gun"
+													android:textColor="#FFFFFF"
+													tools:ignore="HardcodedText" />
+
+												<CheckBox
+													android:id="@+id/GullieSuit"
+													android:layout_width="match_parent"
+													android:layout_height="match_parent"
+													android:buttonTint="#FFFFFF"
+													android:checked="true"
+													android:text="Ghillie Suitt"
+													android:textColor="#FFFFFF"
+													tools:ignore="HardcodedText" />
+
+											</TableRow>
+										</TableLayout>
+
+										<TableLayout
+											android:layout_width="match_parent"
+											android:layout_height="match_parent">
+
+											<TableRow
+												android:layout_width="match_parent"
+												android:layout_height="match_parent">
+
+												<CheckBox
+													android:id="@+id/AirDrop"
+													android:layout_width="match_parent"
+													android:layout_height="match_parent"
+													android:buttonTint="#FFFFFF"
+													android:checked="true"
+													android:text="AirDrop"
+													android:textColor="#FFFFFF"
+													tools:ignore="HardcodedText" />
+
+												<CheckBox
+													android:id="@+id/DropPlane"
+													android:layout_width="match_parent"
+													android:layout_height="match_parent"
+													android:buttonTint="#FFFFFF"
+													android:checked="true"
+													android:text="DropPlane"
+													android:textColor="#FFFFFF"
+													tools:ignore="HardcodedText" />
+											</TableRow>
+										</TableLayout>
+
+										<TableLayout
+											android:layout_width="match_parent"
+											android:layout_height="match_parent">
+
+											<TableRow
+												android:layout_width="match_parent"
+												android:layout_height="match_parent">
+
+												<CheckBox
+													android:id="@+id/Crate"
+													android:layout_width="match_parent"
+													android:layout_height="match_parent"
+													android:buttonTint="#FFFFFF"
+													android:checked="true"
+													android:text="Crate"
+													android:textColor="#FFFFFF"
+													tools:ignore="HardcodedText" />
+											</TableRow>
+										</TableLayout>
+									</LinearLayout>
+
+									<LinearLayout
+										android:id="@+id/scoperitem"
+										android:layout_width="match_parent"
+										android:layout_height="match_parent"
+										android:orientation="vertical"
+										android:visibility="gone">
+
+										<TextView
+											android:id="@+id/scopes"
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="SCOPES"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/hollow"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Hollow"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/canted"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Canted"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/reddot"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Red Dot"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/twox"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="2x"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:orientation="horizontal"
+											android:textColor="#FFFFFF"
+											tools:ignore="HardcodedText">
+
+											<CheckBox
+												android:id="@+id/eightx"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="8x"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/threex"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="3x"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="match_parent"
+											android:layout_height="match_parent"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/fourx"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="4x"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/sixx"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="6x"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+										</LinearLayout>
+									</LinearLayout>
+
+									<LinearLayout
+										android:id="@+id/autoaritem"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="vertical"
+										android:visibility="gone">
+
+										<TextView
+											android:id="@+id/arsmg"
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="AR AND SMG"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											android:visibility="visible"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/AUG"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="AUG"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/M762"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="M762"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/SCARL"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="SCAR-L"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/M416"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="M416"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/M16A4"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="M16A4"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Mk47Mutant"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Mk47 Mutant"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/G36C"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="G36C"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/QBZ"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="QBZ"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/AKM"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="AKM"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Groza"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Groza"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Bizon"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Bizon"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/TommyGun"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="TommyGun"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/MP5K"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="MP5K"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/UMP"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="UMP"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Vector"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Vector"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Uzi"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Uzi"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/DP28"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="DP28"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/M249"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="M249"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+									</LinearLayout>
+
+									<LinearLayout
+										android:id="@+id/snperitem"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="vertical"
+										android:visibility="gone">
+
+										<TextView
+											android:id="@+id/snipers"
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="SNIPER"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											android:visibility="visible"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/AWM"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="AWM"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/QBU"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="QBU"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/SLR"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="SLR"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/SKS"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="SKS"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Mini14"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Mini14"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText,TooManyViews" />
+
+											<CheckBox
+												android:id="@+id/M24"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="M24"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Kar98k"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Kar98k"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText,TooManyViews" />
+
+											<CheckBox
+												android:id="@+id/VSS"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="VSS"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Win94"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Win94"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Mk14"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Mk14"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText,TooManyViews" />
+										</LinearLayout>
+									</LinearLayout>
+
+									<LinearLayout
+										android:id="@+id/shotgunpitem"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="vertical"
+										android:visibility="gone">
+
+										<TextView
+											android:id="@+id/shotgunhaand"
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="SHOTGUN AND PAN"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											android:visibility="visible"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/S12K"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="S12K"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/DBS"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="DBS"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/S686"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="S686"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/S1897"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="S1897"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Sickle"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Sickle"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Machete"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Machete"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/CrossBow"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="CrossBow"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Pan"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Pan"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Crowbar"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Cowbar"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+									</LinearLayout>
+
+									<LinearLayout
+										android:id="@+id/pidtolsitem"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="vertical"
+										android:visibility="gone">
+
+										<TextView
+											android:id="@+id/pistols"
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="PISTOL"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											android:visibility="visible"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/SawedOff"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="SawedOff"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/R1895"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="R1895"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Vz61"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Vz61"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/P92"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="P92"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/P18C"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="P18C"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/R45"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="R45"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/P1911"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="P1911"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/DesertEagle"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Desert Eagle"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+									</LinearLayout>
+
+									<LinearLayout
+										android:id="@+id/ammossitem"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="vertical"
+										android:visibility="gone">
+
+										<TextView
+											android:id="@+id/ammo"
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="AMMO"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											android:visibility="visible"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/sst"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="7.62"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/ffACP"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="45ACP"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/ffs"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="5.56"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/nmm"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="9mm"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText,InOrMmUsage" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/tzzMagnum"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="300Magnum"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/otGuage"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="12 Guage"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Arrow"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Arrow"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+									</LinearLayout>
+
+									<LinearLayout
+										android:id="@+id/baghelmetsitem"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="vertical"
+										android:visibility="gone">
+
+										<TextView
+											android:id="@+id/baghelmet"
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="BAG HELMET VEST"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Baglvl1"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Bag L 1"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Baglvl2"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Bag L 2"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Baglvl3"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Bag L 3"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Helmetlvl1"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Helmet 1"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Helmetlvl2"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Helmet 2"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Helmetlvl3"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Helmet 3"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Vestlvl1"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Vest L 1"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Vestlvl2"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Vest L 2"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Vestlvl3"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Vest L 3"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+									</LinearLayout>
+
+									<LinearLayout
+										android:id="@+id/healthkitsitem"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="vertical"
+										android:visibility="gone">
+
+										<TextView
+											android:id="@+id/healthkits"
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="HEALTH KIT"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											android:visibility="visible"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Painkiller"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="PainKiller"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Adrenaline"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Adrenaline"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Bandage"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Bandage"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/FirstAidKit"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="FirstAidKit"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/EnergyDrink"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Energy Drink"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Medkit"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Medkit"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+									</LinearLayout>
+
+
+									<LinearLayout
+										android:id="@+id/throwblesitem"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="vertical"
+										android:visibility="gone">
+
+										<TextView
+											android:id="@+id/Throwables"
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="THROWABLES"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											android:visibility="visible"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Stung"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Stung"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Grenade"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Grenade"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Smoke"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Smoke"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Molotov"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Molotov"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+									</LinearLayout>
+
+									<LinearLayout
+										android:id="@+id/othersitem"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="vertical"
+										android:visibility="gone">
+
+										<TextView
+											android:id="@+id/others"
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="SPECIAL ITEMS"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/FlashHiderAr"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Flash Hider Ar"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/ArCompensator"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Ar Compensator"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/CompensatorSMG"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Compensator SMG"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/TacticalStock"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Tactical Stock"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Duckbill"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Duckbill"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/FlashHiderSniper"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Flash Hider Snp"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/SuppressorSMG"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Suppressor SMG"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/HalfGrip"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Half Grip"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Choke"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Choke"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/StockMicroUZI"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Stock Micro UZI"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/SniperCompensator"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="SniperCompensator"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/SuppressorSniper"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Sup Sniper"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/SuppressorAr"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Suppressor Ar"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/ExQdSniper"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Ex.Qd.Sniper"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/QdSMG"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Qd.SMG"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/ExSMG"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Ex.SMG"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/QdSniper"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Qd.Sniper"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/ExSniper"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Ex.Sniper"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/ExAr"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Ex.Ar"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/ExQdAr"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Ex.Qd.Ar"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/QdAr"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Qd.Ar"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/ExQdSMG"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Ex.Qd.SMG"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/QuiverCrossBow"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Quiver CrossBow"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/BulletLoop"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Bullet Loop"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/ThumbGrip"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Thumb Grip"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/LaserSight"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Laser Sight"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/AngledGrip"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Angled Grip"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/LightGrip"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Light Grip"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/GasCan"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Gas Can"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/FlashHiderSMG"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Flash Hider SMG"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/VerticalGrip"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="Vertical Grip"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/CheekPad"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:buttonTint="#FFFFFF"
+												android:text="CheekPad"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+									</LinearLayout>
+
+									<LinearLayout
+										android:id="@+id/vihiclesitem"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="vertical"
+										android:visibility="visible">
+
+										<TextView
+											android:id="@+id/vihicleitems"
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:layout_gravity="left"
+											android:layout_marginLeft="5dp"
+											android:text="VEHICLE"
+											android:textColor="#FFFFFF"
+											android:textSize="15sp"
+											android:visibility="visible"
+											tools:ignore="HardcodedText" />
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Buggy"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Buggy"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/UAZ"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="UAZ"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Trike"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Trike"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Bike"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Bike"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Dacia"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Dacia"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Jet"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Jet"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Boat"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Boat"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Bus"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Bus"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Mirado"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Mirado"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Scooter"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Scooter"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Rony"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Rony"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Snowbike"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Snowbike"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Snowmobile"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Snowmobile"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/Tempo"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Tempo"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/Truck"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Truck"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/MonsterTruck"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="Monster Truck"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+
+											<CheckBox
+												android:id="@+id/BRDM"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="BRDM"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+
+										<LinearLayout
+											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:orientation="horizontal">
+
+											<CheckBox
+												android:id="@+id/LadaNiva"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:buttonTint="#FFFFFF"
+												android:checked="true"
+												android:text="LadaNiva"
+												android:textColor="#FFFFFF"
+												tools:ignore="HardcodedText" />
+										</LinearLayout>
+									</LinearLayout>
+
+								</LinearLayout>
+							</ScrollView>
+
+						</LinearLayout>
+					</RelativeLayout>
+
+				</LinearLayout>
+
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<TextView
+						android:id="@+id/textView4"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:layout_marginTop="10dp"
+						android:gravity="left"
+						android:text="DESI ESP"
+						android:textColor="#FFFFFF"
+						android:textSize="25dp"
+						android:textStyle="bold"
+						tools:ignore="HardcodedText" />
+
+				</LinearLayout>
+
+				<TextView
+					android:id="@+id/closeBtn"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignRight="@id/contentView"
+					android:layout_marginTop="10dp"
+					android:layout_marginRight="10dp"
+					android:gravity="left"
+					android:text="X"
+					android:textColor="#FFFFFF"
+					android:textSize="25dp"
+					android:textStyle="bold"
+					tools:ignore="HardcodedText" />
+
+
+			</RelativeLayout>
+		</androidx.cardview.widget.CardView>
+
+	</LinearLayout>
+
+</FrameLayout>
+
